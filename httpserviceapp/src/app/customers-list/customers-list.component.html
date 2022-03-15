@@ -1,0 +1,38 @@
+<p>Routing comp Works!</p>
+
+<div class="container custom-container-2">
+
+   Show it when there is no employee
+
+   Customer list table
+  <div *ngIf="Customers.length !== 0">
+    <h3 class="mb-3 text-center">Customer List</h3>
+
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone-No</th>
+            <th scope="col">Website</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of Customers">
+            <td>{{customer.id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.phone}}</td>
+            <td>{{customer.website}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
